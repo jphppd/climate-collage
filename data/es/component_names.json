@@ -1,0 +1,30 @@
+{
+  "fullName": "Español",
+  "climateCollage": "The Climate Collage",
+  "mainWebsite": "https://climatecollage.org/",
+  "explanations": {
+    "origins": "Origin(s)",
+    "card": "Card",
+    "effects": "Effect(s)",
+    "moreInfo": "More information..."
+  },
+  "selector": {
+    "language": "Language",
+    "links": "Links",
+    "dl_doc": "Open the PDF documentation",
+    "filters": {
+      "name": "Filters",
+      "cards": "Cards",
+      "relations": "Relations",
+      "batch1": "Batch 1",
+      "batch12": "Batch 1 - 2",
+      "batch123": "Batch 1 - 3",
+      "batch1234": "Batch 1 - 4",
+      "batch12345": "Batch 1 - 5",
+      "major": "Main",
+      "minor": "subsidiary",
+      "false": "Erroneous",
+      "simplified": "Simplified"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "fullName": "Français",
+  "climateCollage": "La Fresque du climat",
+  "mainWebsite": "https://fresqueduclimat.org/",
+  "explanations": {
+    "origins": "Origine(s)",
+    "card": "Carte",
+    "effects": "Effet(s)",
+    "moreInfo": "En savoir plus..."
+  },
+  "selector": {
+    "language": "Langue",
+    "links": "Liens",
+    "dl_doc": "Ouvrir la documentation PDF",
+    "filters": {
+      "name": "Filtres",
+      "cards": "Cartes",
+      "relations": "Relations",
+      "batch1": "Lot 1",
+      "batch12": "Lot 1 - 2",
+      "batch123": "Lot 1 - 3",
+      "batch1234": "Lot 1 - 4",
+      "batch12345": "Lot 1 - 5",
+      "major": "Principales",
+      "minor": "Accessoires",
+      "false": "Erronées",
+      "simplified": "Simplifiées"
+    }
+  }
+}
