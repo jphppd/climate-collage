@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+for dep in pipenv black pylint; do
+    if ! command -v "${dep}"; then
+        echo "Installing ${dep}"
+        pip3 install --user "${dep}"
+    fi
+done
+
+pipenv install
+pipenv check
+
+pipenv run black --skip-string-normalization --line-length 99 doc_generator.py
+pipenv run pylint --disable=C0103,R0902,R0903,E0401 doc_generator.py
+pipenv run python3 doc_generator.py
+

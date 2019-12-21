@@ -1,0 +1,11 @@
+.vis-container,
+.vis-network,
+canvas {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sticky	{
+  position: sticky;
+  top: 32px;
+}

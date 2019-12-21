@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <link href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" rel="stylesheet"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet"/>
+        <style>
+        .card {
+            break-inside: avoid;
+            border: 1px solid;
+            margin: 1cm;
+            border-color: hsl(171, 100%, 41%);
+        }
+        </style>
+    </head>
+    <body>
+        {% for card in cards -%}
+        <div class="card">
+            <h1 class="title has-text-centered has-text-white has-background-primary is-size-1">
+                {{ card.id }} - {{ card.title }}
+            </h1>
+            <div class="columns">
+                <div class="column origins">
+                    {% for color, origins in (
+                        ('success', card.relations.origins['major']),
+                        ('warning', card.relations.origins['minor']),
+                        ('danger', card.relations.origins['false']),
+                        ('info', card.relations.origins['simplified'])
+                        ) -%}
+                    {% for origin in origins -%}
+                    <div class="columns is-gapless is-vcentered">
+                        <div class="column">
+                            <img src="../images/{{language}}/node_recto_{{ origin }}.jpg"/>
+                        </div>
+                        <div class="column is-1"></div>
+                        <div class="column is-4 is-size-5 has-text-centered">
+                            <div>{{ origin }}</div>
+                            <div class="icon has-text-{{ color }}"><i class="fas fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+                    {% endfor -%}
+                    {% endfor -%}
+                </div>
+                <div class="column explanation is-7">
+                    <div class="columns">
+                        <div class="column"></div>
+                        <div class="column is-4">
+                            <img class="has-text-centered" src="../images/{{language}}/node_recto_{{ card.id }}.jpg"/>
+                        </div>
+                        <div class="column"></div>
+                        <div class="column is-4">
+                            <img class="has-text-centered" src="../images/{{language}}/node_verso_{{ card.id }}.jpg" style="border: 1px solid;"/>
+                        </div>
+                        <div class="column"></div>
+                    </div>
+                    <div class="has-text-justified">{{ card.more_info | safe }}</div>
+                </div>
+                <div class="column effects">
+                    {% for color, effects in (
+                        ('success', card.relations.effects['major']),
+                        ('warning', card.relations.effects['minor']),
+                        ('danger', card.relations.effects['false']),
+                        ('info', card.relations.effects['simplified'])
+                        ) -%}
+                    {% for effect in effects -%}
+                    <div class="columns is-gapless is-vcentered">
+                        <div class="column is-4 is-size-5 has-text-centered">
+                            <div>{{ effect }}</div>
+                            <div class="icon has-text-{{ color }}"><i class="fas fa-arrow-right"></i></div>
+                        </div>
+                        <div class="column is-1"></div>
+                        <div class="column">
+                            <img src="../images/{{language}}/node_recto_{{ effect }}.jpg"/>
+                        </div>
+                    </div>
+                    {% endfor -%}
+                    {% endfor -%}
+                </div>
+            </div>
+        </div>
+        {% endfor -%}
+    </body>
+</html>
