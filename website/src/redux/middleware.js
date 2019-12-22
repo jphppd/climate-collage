@@ -11,7 +11,7 @@ import {
 import { animOptions, hiddenNode, relationsColorMapping, visibleNode } from '../utils/constants';
 
 /**
- * Quizz only: toggle visibiliy of selected node
+ * Quiz only: toggle visibiliy of selected node
  * @param nodeId: id of node
  * @param nodesSet: visjs.Dataset
  */
@@ -32,16 +32,16 @@ function toggleNodeVisibility(nodeId, nodesSet) {
  * Update i18n elements of nodes
  * @param nodesSet: visjs.Dataset
  * @param currentLocale: string ('en', 'fr', ...)
- * @param isQuizzSession: boolean
+ * @param isQuizSession: boolean
  */
-function updateI18nOfNodes(nodesSet, currentLocale, isQuizzSession) {
+function updateI18nOfNodes(nodesSet, currentLocale, isQuizSession) {
   if (!(nodesSet && currentLocale)) {
     return;
   }
   const newNodes = Object.values(nodesSet.get());
   newNodes.forEach(
     node => {
-      node.label = isQuizzSession ? undefined : I18n.t(`nodes.${node.id}.wrappedTitle`).replace(/\\n/g, '\n');
+      node.label = isQuizSession ? undefined : I18n.t(`nodes.${node.id}.wrappedTitle`).replace(/\\n/g, '\n');
       node.image = `data/images/${currentLocale}/node_recto_${node.id}.jpg`;
     });
   nodesSet.update(newNodes);
@@ -50,14 +50,14 @@ function updateI18nOfNodes(nodesSet, currentLocale, isQuizzSession) {
 /**
  * Fill visjs.data from the fetched json data.
  */
-function createDataViews(store, isQuizz) {
+function createDataViews(store, isQuiz) {
   const visjsData = store.getState().visjs.data;
   const newNodes = Object.values(store.getState().data.nodes);
   const newEdges = Object.values(store.getState().data.edges);
 
   newNodes.forEach(
     node => {
-      node.visible = isQuizz;
+      node.visible = isQuiz;
       node.label = undefined;
       node.labelHighlightBold = true;
       node.font = {
@@ -94,11 +94,11 @@ const setNetworkMiddleware = store => dispatch => action => {
   }
 
   const currentLocale = store.getState().i18n.locale;
-  const isQuizz = store.getState().display.quizz;
+  const isQuiz = store.getState().display.quiz;
   switch (action.type) {
     case SET_DATA:
-      createDataViews(store, isQuizz);
-      updateI18nOfNodes(store.getState().visjs.data.nodesSet, currentLocale, isQuizz);
+      createDataViews(store, isQuiz);
+      updateI18nOfNodes(store.getState().visjs.data.nodesSet, currentLocale, isQuiz);
       store.getState().visjs.data.nodesSet.forEach(
         node => toggleNodeVisibility(node.id, store.getState().visjs.data.nodesSet)
       );
@@ -109,7 +109,7 @@ const setNetworkMiddleware = store => dispatch => action => {
       break;
 
     case UPDATE_DATA:
-      updateI18nOfNodes(store.getState().visjs.data.nodesSet, currentLocale, isQuizz);
+      updateI18nOfNodes(store.getState().visjs.data.nodesSet, currentLocale, isQuiz);
       break;
 
     case DISPLAY_BATCH:
@@ -124,12 +124,12 @@ const setNetworkMiddleware = store => dispatch => action => {
       break;
 
     case SELECT_NODE:
-      if (isQuizz) {
+      if (isQuiz) {
         toggleNodeVisibility(action.nodeId, store.getState().visjs.data.nodesSet);
       }
       network.selectNodes([action.nodeId]);
       network.focus(action.nodeId, {
-        scale: store.getState().display.quizz ? 1.2 : 2,
+        scale: store.getState().display.quiz ? 1.2 : 2,
         animation: animOptions
       });
       break;

@@ -27,11 +27,15 @@ export const getDefaultLanguage = (window, availLanguage) => {
   return undefined;
 };
 
-/* Look in the query parameters of the url, deduce if we are in quizz mode */
-export const isQuizz = (window) => {
-  const quizz = getUrlQueryStrings(window).quizz;
-  if (quizz) {
-    return quizz === 'true';
+/* Look in the query parameters of the url, deduce if we are in quiz mode */
+export const isQuiz = (window) => {
+  const quiz = getUrlQueryStrings(window).quiz;
+  if (quiz) {
+    return (quiz === '1') || (quiz === 'true') || (quiz === 't');
   }
-  return false;
+  const correction = getUrlQueryStrings(window).correction;
+  if (correction) {
+    return !((correction === '1') || (correction === 'true') || (correction === 't'));
+  }
+  return true;
 };

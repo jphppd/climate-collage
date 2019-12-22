@@ -16,7 +16,7 @@ import middlewaresChain from './redux/middleware';
 import { loadData, selectNode, setData, updateData } from './redux/actions';
 import { Explanations, Fresque, Modal, Selectors } from './components';
 import { getDefaultLanguage } from './utils/functions';
-import { dataPath, fallbackLanguage, preloadedState, quizzData } from './utils/constants';
+import { dataPath, fallbackLanguage, preloadedState, quizData } from './utils/constants';
 
 /*
 https://visjs.github.io/vis-network/docs/network/
@@ -26,7 +26,7 @@ https://visjs.github.io/vis-data/data/dataview.html
 
 const buildApp = (store) => {
   let app;
-  if (store.getState().display.quizz) {
+  if (store.getState().display.quiz) {
     app = (
       <Provider store={store}>
         <Fresque/>
@@ -90,13 +90,13 @@ const buildApp = (store) => {
       store.dispatch(updateData());
     })
     .then(() => {
-      if (store.getState().display.quizz) {
-        store.dispatch(selectNode(quizzData.firstNode));
+      if (store.getState().display.quiz) {
+        store.dispatch(selectNode(quizData.firstNode));
       }
     });
 
   window.onresize = (event) => {
-    if (store.getState().display.quizz) {
+    if (store.getState().display.quiz) {
       store.getState().visjs.network.setSize(window.innerWidth, window.innerHeight);
     }
   };

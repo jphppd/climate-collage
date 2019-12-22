@@ -14,7 +14,7 @@
     "redux-thunk": "^2.3.0",
     "vis-network": "^6.4.0"
   },
-  "homepage": "https://dugard.eu/fresque",
+  "homepage": "https://fresqueduclimat.org/quiz/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

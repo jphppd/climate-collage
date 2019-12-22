@@ -1,6 +1,6 @@
 import { DataSet } from 'vis-data';
 import { NodeBatch } from '../redux/actions';
-import { isQuizz } from './functions';
+import { isQuiz } from './functions';
 
 /* Fallback language, when all other methods failed */
 export const fallbackLanguage = 'en';
@@ -12,8 +12,8 @@ export const dataPath = {
   pdfDocs: 'data/dl/documentation_LANG.pdf'
 };
 
-/* Quizz related data */
-export const quizzData = {
+/* Quiz related data */
+export const quizData = {
   firstNode: '14' /* first visible node */
 };
 
@@ -69,7 +69,7 @@ const visjsBaseOptions = {
 };
 
 export const visjsOptions = {
-  quizz: {
+  quiz: {
     ...visjsBaseOptions,
     height: `${window.innerHeight}px`,
     edges: {
@@ -77,7 +77,7 @@ export const visjsOptions = {
       chosen: false
     }
   },
-  noquizz: {
+  noquiz: {
     ...visjsBaseOptions,
     height: '600px',
     edges: {
@@ -105,7 +105,7 @@ export const preloadedState = {
     edges: []
   },
   display: {
-    quizz: isQuizz(window),
+    quiz: isQuiz(window),
     /* Booleans: display or not elements */
     edge: {
       major: true,

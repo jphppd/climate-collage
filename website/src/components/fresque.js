@@ -39,13 +39,13 @@ class Fresque extends Component {
     const network = new Network(
       document.getElementById(netIdentifier),
       {},
-      this.props.quizz ? visjsOptions.quizz : visjsOptions.noquizz
+      this.props.quiz ? visjsOptions.quiz : visjsOptions.noquiz
     );
 
     network.on('click', properties => this.onClick(network, properties));
     network.on('hoverNode', params => this.onHover(network));
     network.on('blurNode', params => this.onBlur(network));
-    if (!this.props.quizz) {
+    if (!this.props.quiz) {
       network.on('hoverEdge', params => this.onHover(network));
       network.on('blurEdge', params => this.onBlur(network));
     }
@@ -59,7 +59,7 @@ class Fresque extends Component {
 }
 
 const mapStateToProps = state => ({
-  quizz: state.display.quizz
+  quiz: state.display.quiz
 });
 
 const mapDispatchToProps = dispatch => ({
