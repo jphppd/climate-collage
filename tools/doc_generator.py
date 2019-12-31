@@ -47,6 +47,7 @@ class Edge:
     def render_visjs(self):
         """Render as dict, dedicated to website."""
         return {
+            'id': f'{self.ffrom}_{self.to}',
             'from': self.ffrom,
             'to': self.to,
             'relation': self.relation,

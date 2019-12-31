@@ -63,6 +63,7 @@ export default (state, action) => {
         ...state,
         selection: {
           ...state.selection,
+          edgeId: undefined,
           nodeId: action.nodeId
         }
       };
@@ -72,6 +73,7 @@ export default (state, action) => {
         ...state,
         selection: {
           ...state.selection,
+          nodeId: undefined,
           edgeId: action.edgeId
         }
       };
