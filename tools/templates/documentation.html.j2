@@ -12,6 +12,12 @@
             margin: 1cm;
             border-color: hsl(171, 100%, 41%);
         }
+        .relation {
+            break-inside: avoid;
+            border: 1px solid;
+            margin: 1cm;
+            border-color: hsl(171, 100%, 41%);
+        }
         </style>
     </head>
     <body>
@@ -22,12 +28,7 @@
             </h1>
             <div class="columns">
                 <div class="column origins">
-                    {% for color, origins in (
-                        ('success', card.relations.origins['major']),
-                        ('warning', card.relations.origins['minor']),
-                        ('danger', card.relations.origins['false']),
-                        ('info', card.relations.origins['simplified'])
-                        ) -%}
+                    {% for importance, origins in card.relations.origins.items() -%}
                     {% for origin in origins -%}
                     <div class="columns is-gapless is-vcentered">
                         <div class="column">
@@ -36,7 +37,9 @@
                         <div class="column is-1"></div>
                         <div class="column is-4 is-size-5 has-text-centered">
                             <div>{{ origin }}</div>
-                            <div class="icon has-text-{{ color }}"><i class="fas fa-arrow-right"></i></div>
+                            <div class="icon has-text-{{ color_mapping[importance] }} fa-lg">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
                         </div>
                     </div>
                     {% endfor -%}
@@ -54,20 +57,19 @@
                         </div>
                         <div class="column"></div>
                     </div>
-                    <div class="has-text-justified">{{ card.more_info | safe }}</div>
+                    <div class="has-text-justified is-size-5">
+                        {{ card.more_info | safe }}
+                    </div>
                 </div>
                 <div class="column effects">
-                    {% for color, effects in (
-                        ('success', card.relations.effects['major']),
-                        ('warning', card.relations.effects['minor']),
-                        ('danger', card.relations.effects['false']),
-                        ('info', card.relations.effects['simplified'])
-                        ) -%}
+                    {% for importance, effects in card.relations.effects.items() -%}
                     {% for effect in effects -%}
                     <div class="columns is-gapless is-vcentered">
                         <div class="column is-4 is-size-5 has-text-centered">
                             <div>{{ effect }}</div>
-                            <div class="icon has-text-{{ color }}"><i class="fas fa-arrow-right"></i></div>
+                            <div class="icon has-text-{{ color_mapping[importance] }} fa-lg">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
                         </div>
                         <div class="column is-1"></div>
                         <div class="column">
@@ -76,6 +78,35 @@
                     </div>
                     {% endfor -%}
                     {% endfor -%}
+                </div>
+            </div>
+        </div>
+        {% endfor -%}
+        <div style="page-break-before: always;"></div>
+        {% for relation in relations -%}
+        <div class="relation">
+            <div class="columns">
+                <div class="column is-2">
+                    <img src="../images/{{language}}/node_recto_{{ relation.from }}.jpg"/>
+                    <img src="../images/{{language}}/node_verso_{{ relation.from }}.jpg"/>
+                </div>
+                <div class="column is-size-5">
+                    <div class="has-text-centered" style="padding-top: 1.5em;">
+                        <span style="padding: 0.2em;">{{ relation.from }}</span>
+                        <span class="icon has-text-{{ color_mapping[relation.relation] }} fa-lg">
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+                        <span style="padding: 0.2em;">{{ relation.to }}</span>
+                    </div>
+                    {% if relation.info %}
+                    <div class="column has-text-justified is-size-5">
+                        <div>{{ relation.info | safe }}</div>
+                    </div>
+                    {% endif -%}
+                </div>
+                <div class="column is-2">
+                    <img src="../images/{{language}}/node_recto_{{ relation.to }}.jpg"/>
+                    <img src="../images/{{language}}/node_verso_{{ relation.to }}.jpg"/>
                 </div>
             </div>
         </div>

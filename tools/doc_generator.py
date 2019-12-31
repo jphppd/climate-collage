@@ -13,9 +13,9 @@ import subprocess
 import htmlmin
 from jinja2 import Environment, FileSystemLoader
 
-SRC_DATA = Path("../data").absolute()
-PUBLIC_DATA = Path("../website/public/data").absolute()
-DOC_DATA = PUBLIC_DATA / "dl"
+SRC_DATA = Path('../data').absolute()
+PUBLIC_DATA = Path('../website/public/data').absolute()
+DOC_DATA = PUBLIC_DATA / 'dl'
 
 if not SRC_DATA.exists():
     raise FileNotFoundError(f'${SRC_DATA} cannot be found')
@@ -25,12 +25,12 @@ if not PUBLIC_DATA.exists():
 if not DOC_DATA.exists():
     DOC_DATA.mkdir(parents=True)
 
-TRANSLATIONS_JSON = PUBLIC_DATA / "content" / "translations.json"
-GRAPH_JSON = PUBLIC_DATA / "content" / "graph.json"
+TRANSLATIONS_JSON = PUBLIC_DATA / 'content' / 'translations.json'
+GRAPH_JSON = PUBLIC_DATA / 'content' / 'graph.json'
 
-REL_TYPES = {"major", "minor", "false", "simplified"}
+REL_TYPES = {'major': 'success', 'minor': 'warning', 'false': 'danger', 'simplified': 'info'}
 
-AVAIL_LANGUAGES = ("fr", "en", "de", "es")
+AVAIL_LANGUAGES = ('fr', 'en', 'de', 'es')
 
 
 @total_ordering
@@ -55,6 +55,10 @@ class Edge:
     def render_doc(self, language):
         """Render as dict for generic documentation, with info, more_info, etc."""
         return {'info': self.info[language]}
+
+    def render_html(self, language):
+        """Render as dict for generic documentation, with info, more_info, etc."""
+        return {**self.render_visjs(), 'info': self.info[language]}
 
     def __eq__(self, other):
         """Implement equality comparison, for sorting purposes."""
@@ -114,6 +118,10 @@ class Node:
             out['wrappedTitle'] = out.pop('wrapped_title')
             out['moreInfo'] = out.pop('more_info')
         return out
+
+    def render_html(self, language, snake_case=True):
+        """Render as dict for generic documentation, with info, more_info, etc."""
+        return self.render_doc(language, snake_case)
 
     def __eq__(self, other):
         """Implement equality comparison, for sorting purposes."""
@@ -220,12 +228,19 @@ def render_translations(nodes, edge_struct):
         json.dump(translation, translations_fh, sort_keys=True, indent=2)
 
 
-def render_html(file_basename, nodes, language):
+def render_html(file_basename, nodes, edges_struct, language):
     """Render the html version of the documentation."""
     j2_env = Environment(loader=FileSystemLoader('templates'))
     template = j2_env.get_template(f'{file_basename}.html.j2')
+
+    flatten_edges = [edge for edges in edges_struct.values() for edge in edges]
+    flatten_edges.sort()
+
     rendered_template = template.render(
-        cards=[node.render_doc(language) for node in nodes], language=language
+        cards=[node.render_html(language) for node in nodes],
+        relations=[edge.render_html(language) for edge in flatten_edges],
+        language=language,
+        color_mapping=REL_TYPES,
     )
 
     with (DOC_DATA / f'{file_basename}_{language}.html').open('w') as html_fh:
@@ -274,7 +289,7 @@ def render(edges, nodes):
 
     for language in AVAIL_LANGUAGES:
         file_basename = 'documentation'
-        render_html(file_basename, nodes, language)
+        render_html(file_basename, nodes, edges, language)
         render_pdf(file_basename, language)
 
 
