@@ -1,11 +1,14 @@
 {
   "de": {
     "climateCollage": "The Climate Collage (engl.)",
+    "edges": {},
     "explanations": {
       "card": "Karte",
       "effects": "Wirkung(en)",
+      "elt_placeholder": "Element",
       "moreInfo": "Weitere Informationen...",
-      "origins": "Ursache(n)"
+      "origins": "Ursache(n)",
+      "relation": "Beziehung"
     },
     "fullName": "Deutsch",
     "mainWebsite": "https://climatecollage.org/",
@@ -252,9 +255,7 @@
             "simplified": []
           },
           "origins": {
-            "false": [
-              "21"
-            ],
+            "false": [],
             "major": [
               "14"
             ],
@@ -310,7 +311,6 @@
           "effects": {
             "false": [
               "13",
-              "20",
               "20",
               "22"
             ],
@@ -421,7 +421,6 @@
           },
           "origins": {
             "false": [
-              "18",
               "18"
             ],
             "major": [
@@ -442,9 +441,7 @@
         "moreInfo": "<div class=content><p> Cette carte peut jouer deux r\u00f4les&nbsp;: </p><ul><li> Soit c'est la temp\u00e9rature de l'air, donc de l'atmosph\u00e8re. C'est comme \u00e7a qu'il faut l'interpr\u00e9ter quand on a gard\u00e9 les cartes 10, 14 et 15. Dans ce cas, la carte pr\u00e9c\u00e9dente est la 14. </li><li> Soit elle repr\u00e9sente la temp\u00e9rature de la terre (et \u00e7a tombe bien parce que la d\u00e9finition de la temp\u00e9rature de la terre, c'est justement la temp\u00e9rature de l'air, au sol, en moyenne sur la surface de la terre). Dans ce cas, la carte pr\u00e9c\u00e9dente est la 13 et on peut faire un lien vers les cartes 16, 17, 18 et 19. </li></ul><p> Rappel&nbsp;: dans le pr\u00e9sent document, les fl\u00e8ches bleues sont celles qui correspondent au cas o\u00f9 l'on a enlev\u00e9 les cartes 10, 14 et 15. </p><p> Sur le graphique, le z\u00e9ro est au niveau de la temp\u00e9rature en 2010. Pour obtenir les 2&nbsp;\u00b0C du sc\u00e9nario bleu fonc\u00e9, il faut donc additionner les \u00e9carts T(2010)-T(1900) = 1,4&nbsp;\u00b0C et T(2100) - T (2010) =0,6&nbsp;\u00b0C </p><p> On repr\u00e9sente en g\u00e9n\u00e9ral les graphiques de temp\u00e9rature sous forme d'anomalie de temp\u00e9rature, c'est-\u00e0-dire d'un \u00e9cart \u00e0 une temp\u00e9rature de r\u00e9f\u00e9rence. </p></div>",
         "relations": {
           "effects": {
-            "false": [
-              "16"
-            ],
+            "false": [],
             "major": [
               "20",
               "25",
@@ -1366,11 +1363,14 @@
   },
   "en": {
     "climateCollage": "The Climate Collage",
+    "edges": {},
     "explanations": {
       "card": "Card",
       "effects": "Effect(s)",
+      "elt_placeholder": "Element",
       "moreInfo": "More information...",
-      "origins": "Origin(s)"
+      "origins": "Origin(s)",
+      "relation": "Relation"
     },
     "fullName": "English",
     "mainWebsite": "https://climatecollage.org/",
@@ -1617,9 +1617,7 @@
             "simplified": []
           },
           "origins": {
-            "false": [
-              "21"
-            ],
+            "false": [],
             "major": [
               "14"
             ],
@@ -1675,7 +1673,6 @@
           "effects": {
             "false": [
               "13",
-              "20",
               "20",
               "22"
             ],
@@ -1786,7 +1783,6 @@
           },
           "origins": {
             "false": [
-              "18",
               "18"
             ],
             "major": [
@@ -1807,9 +1803,7 @@
         "moreInfo": "<div class=content><p> Cette carte peut jouer deux r\u00f4les&nbsp;: </p><ul><li> Soit c'est la temp\u00e9rature de l'air, donc de l'atmosph\u00e8re. C'est comme \u00e7a qu'il faut l'interpr\u00e9ter quand on a gard\u00e9 les cartes 10, 14 et 15. Dans ce cas, la carte pr\u00e9c\u00e9dente est la 14. </li><li> Soit elle repr\u00e9sente la temp\u00e9rature de la terre (et \u00e7a tombe bien parce que la d\u00e9finition de la temp\u00e9rature de la terre, c'est justement la temp\u00e9rature de l'air, au sol, en moyenne sur la surface de la terre). Dans ce cas, la carte pr\u00e9c\u00e9dente est la 13 et on peut faire un lien vers les cartes 16, 17, 18 et 19. </li></ul><p> Rappel&nbsp;: dans le pr\u00e9sent document, les fl\u00e8ches bleues sont celles qui correspondent au cas o\u00f9 l'on a enlev\u00e9 les cartes 10, 14 et 15. </p><p> Sur le graphique, le z\u00e9ro est au niveau de la temp\u00e9rature en 2010. Pour obtenir les 2&nbsp;\u00b0C du sc\u00e9nario bleu fonc\u00e9, il faut donc additionner les \u00e9carts T(2010)-T(1900) = 1,4&nbsp;\u00b0C et T(2100) - T (2010) =0,6&nbsp;\u00b0C </p><p> On repr\u00e9sente en g\u00e9n\u00e9ral les graphiques de temp\u00e9rature sous forme d'anomalie de temp\u00e9rature, c'est-\u00e0-dire d'un \u00e9cart \u00e0 une temp\u00e9rature de r\u00e9f\u00e9rence. </p></div>",
         "relations": {
           "effects": {
-            "false": [
-              "16"
-            ],
+            "false": [],
             "major": [
               "20",
               "25",
@@ -2731,11 +2725,14 @@
   },
   "es": {
     "climateCollage": "The Climate Collage",
+    "edges": {},
     "explanations": {
       "card": "Card",
       "effects": "Effect(s)",
+      "elt_placeholder": "Element",
       "moreInfo": "More information...",
-      "origins": "Origin(s)"
+      "origins": "Origin(s)",
+      "relation": "Relation"
     },
     "fullName": "Espa\u00f1ol",
     "mainWebsite": "https://climatecollage.org/",
@@ -2982,9 +2979,7 @@
             "simplified": []
           },
           "origins": {
-            "false": [
-              "21"
-            ],
+            "false": [],
             "major": [
               "14"
             ],
@@ -3040,7 +3035,6 @@
           "effects": {
             "false": [
               "13",
-              "20",
               "20",
               "22"
             ],
@@ -3151,7 +3145,6 @@
           },
           "origins": {
             "false": [
-              "18",
               "18"
             ],
             "major": [
@@ -3172,9 +3165,7 @@
         "moreInfo": "<div class=content><p> Esta carta puede tener 2 roles: </p><ul><li> O es la temperatura del aire, es decir de la atm\u00f3sfera: as\u00ed hay que interpretarla en el caso que hayamos guardado las cartas 10/14 y 15. En este caso, la carta precedente es la 14; </li><li> O representa la temperatura de la Tierra (lo que ya va bien, porque la definici\u00f3n de la temperatura de la Tierra es justamente la temperatura del aire, a nivel del suelo, de promedio en la superficie de la Tierra). En este caso, la carta previa es la 13 y se puede vincular con las cartas 16, 17, 18 y 19. </li></ul><p> Importante recordar: en este documento, las flechas azules corresponden a la versi\u00f3n en la que se retiran las cartas 10, 14 y 15. </p><p> En el gr\u00e1fico, el punto cero corresponde al nivel de temperatura en 2010. Para obtener los 2&nbsp;\u00b0C del escenario azul oscuro hay que a\u00f1adir las diferencias T(2010)-T(1900) = 1,4&nbsp;\u00b0C et T(2100) - T (2010) =0,6&nbsp;\u00b0C </p><p> En general, los gr\u00e1ficos de temperaturas se representan bajo la forma de \u201canomal\u00edas\u201d de temperaturas, es decir, comparadas a una temperatura de referencia. </p></div>",
         "relations": {
           "effects": {
-            "false": [
-              "16"
-            ],
+            "false": [],
             "major": [
               "20",
               "25",
@@ -4096,11 +4087,270 @@
   },
   "fr": {
     "climateCollage": "La Fresque du climat",
+    "edges": {
+      "10_15": {
+        "info": "<div class=\"content\">\n    <p>\n        C'est ce qui est expliqu\u00e9 au dos de la carte 10 et dans la nouvelle version de la carte 15 (> oct 2018) : Les\n        a\u00e9rosols refroidissent le climat. Voir les fiches th\u00e9matiques sur les a\u00e9rosols et sur le for\u00e7age radiatif.\n    </p>\n</div>\n"
+      },
+      "10_38": {
+        "info": "<div class=\"content\">\n    <p>\n        Les a\u00e9rosols sont une pollution locale et c'est pour cette raison qu'on cherche \u00e0 les \u00e9liminer. Par exemple, la\n        Chine est beaucoup plus motiv\u00e9e \u00e0 se d\u00e9barrasser de la pollution qu'\u00e0 r\u00e9duire ses \u00e9missions de CO2. Quans elle\n        parle de \"Clean Coal\", c'est assez symptomatique de cela : c'est du charbon \"propre\" (ou moins sale) d'un point\n        de vue des particules fines, mais \u00e7a fait toujours autant de CO2 !\n    </p>\n</div>\n"
+      },
+      "11_12": {
+        "info": "<div class=\"content\">\n    <p>\n        On peut argumenter que les \u00e9missions de CO2 ont eu lieu dans l'atmosph\u00e8re avant d'aller dans les puits de\n        carbones. Ce lien est d\u00e9fendable. Mais l'id\u00e9e \u00e9tait plut\u00f4t de faire un lien dans l'autre sens. Ce qui n'est pas\n        absorb\u00e9 reste dans l'atmosph\u00e8re.\n    </p>\n</div>\n"
+      },
+      "11_24": {
+        "info": "<div class=\"content\">\n    <p>\n        Pourquoi pas, mais c'est plut\u00f4t depuis la carte 12 (Puits de carbone) qu'il faudrait faire le lien.\n    </p>\n</div>\n"
+      },
+      "12_11": {
+        "info": "<div class=\"content\">\n    <p>\n        La carte 11, c'est la concentration en CO2, sous-entendu \"dans l'atmosph\u00e8re\" (qui est \u00e9crit sur la carte 12).\n    </p>\n</div>\n"
+      },
+      "12_14": {
+        "info": "<div class=\"content\">\n    <p>\n        Le but n'est pas ici de dire qu'il n'y a pas de lien de cause \u00e0 effet entre ces deux cartes, mais d'alerter sur\n        le risque de les confondre. La premi\u00e8re (Puits de Carbone), nous dit o\u00f9 va le carbone. La deuxi\u00e8me (Budget\n        \u00e9nerg\u00e9tique) nous dit o\u00f9 va l'\u00e9nergie en exc\u00e8s sur la Terre. Les deux notions sont proches (dans les deux cas,\n        c'est une allocation), mais ne concernent pas la m\u00eame chose : d'un c\u00f4t\u00e9, le carbone, de l'autre, l'\u00e9nergie. Ce\n        qui contribue encore plus \u00e0 faire la confusion, c'est que l'atmosph\u00e8re et l'oc\u00e9an sont pr\u00e9sents des deux c\u00f4t\u00e9s.\n    </p>\n</div>\n"
+      },
+      "12_24": {
+        "info": "<div class=\"content\">\n    <p>\n        Le mot \"Oc\u00e9an\" est \u00e9crit des deux c\u00f4t\u00e9s.\n    </p>\n</div>\n"
+      },
+      "12_32": {
+        "info": "<div class=\"content\">\n    <p>\n        Des \u00e9tudes ont montr\u00e9 que les rendements augmentent avec de l'augmentation du CO2, mais que la teneur en\n        \u00e9l\u00e9ments nutritifs des l\u00e9gumes s'en trouve r\u00e9duite. En effet, les oligo-\u00e9l\u00e9ments ne sont pas plus abondants sous\n        pr\u00e9exte que les rendements augmentent.\n    </p>\n</div>\n"
+      },
+      "13_15": {
+        "info": "<div class=\"content\">\n    <p>\n        Le mot \"Effet de serre\" est \u00e9crit des deux c\u00f4t\u00e9s.\n    </p>\n</div>\n"
+      },
+      "13_21": {
+        "info": "<div class=\"content\">\n    <p>\n        Dans le cas de la version simplifi\u00e9e, on fait un lien directement entre la carte 13 et la carte 21 qui change\n        alors de r\u00f4le et devient la temp\u00e9rature de la terre et non plus de l'atmosph\u00e8re uniquement. La d\u00e9finition de la\n        temp\u00e9rature de la terre, c'est justement la temp\u00e9rature de l'air, au niveau du sol, en moyenne sur la surface de\n        la terre.\n    </p>\n</div>\n"
+      },
+      "14_21": {
+        "info": "<div class=\"content\">\n    <p>\n        Il est pr\u00e9cis\u00e9 au dos de la carte qu'il s'agit de la temp\u00e9rature de l'air.\n    </p>\n</div>\n"
+      },
+      "14_41": {
+        "info": "<div class=\"content\">\n    <p>\n        On peut faire ce lien, mais pour des raisons pratiques, on peut pr\u00e9f\u00e9rer 21 vers 41.\n    </p>\n</div>\n"
+      },
+      "14_42": {
+        "info": "<div class=\"content\">\n    <p>\n        On peut faire ce lien, mais pour des raisons pratiques, on peut pr\u00e9f\u00e9rer 17 vers 42.\n    </p>\n</div>\n"
+      },
+      "15_14": {
+        "info": "<div class=\"content\">\n    <p>\n        Le texte au verso de la carte 14 ne laisse place \u00e0 aucune ambigu\u00eft\u00e9. C'est pour cette raison qu'il faut\n        supprimer ces deux cartes en m\u00eame temps si on veut avoir une version simplifi\u00e9e. Ces deux cartes vont ensemble\n        un peu \u00e0 la mani\u00e8re des cartes 7 et 12. Le 7 et 12 c'\u00e9tait d'o\u00f9 vient le CO<sub>2</sub> et o\u00f9 il va. 15 et 14\n        c'est d'o\u00f9 vient l'\u00e9nergie qui s'accumule sur Terre et o\u00f9 elle va.\n    </p>\n</div>\n"
+      },
+      "17_24": {
+        "info": "<div class=\"content\">\n    <p>\n        La hausse de la temp\u00e9rature de l'eau n'a aucun lien avec l'acidification de l'oc\u00e9an.\n    </p>\n</div>\n"
+      },
+      "18_13": {
+        "info": "<div class=\"content\">\n    <p>\n        Il y a ici une confusion avec l'effet d'amplification d\u00fb \u00e0 l'albedo. La banquise blanche qui fond laisse place \u00e0\n        une surface beaucoup plus fonc\u00e9e et l'\u00e9nergie absorb\u00e9e r\u00e9chauffe la terre. Ce m\u00e9canisme est appel\u00e9 albedo et n'a\n        rien \u00e0 voir avec l'effet de serre. \u00c7a joue sur les fl\u00e8ches orange de la carte 13 et non sur les fl\u00e8ches rouges.\n    </p>\n</div>\n"
+      },
+      "18_15": {
+        "info": "<div class=\"content\">\n    <p>\n        Quand elle fond, la banquise qui est blanche laisse place \u00e0 de l'eau bleu fonc\u00e9 qui a un alb\u00e9do plus faible.\n        L'albedo est la capacit\u00e9 d'un corps \u00e0 renvoyer la lumi\u00e8re (un corps noir a un albedo de 0, un miroir a un albedo\n        de 1. La terre a un albedo moyen de 0,31). Ainsi, la terre absorbe plus d'\u00e9nergie et se r\u00e9chauffe. C'est une\n        r\u00e9troaction, ou boucle d'amplification. Cette relation n'est pas indispensable, mais certains participants un\n        peu experts vont y penser.\n    </p>\n</div>\n"
+      },
+      "18_20": {
+        "info": "<div class=\"content\">\n    <p>\n        La fonte de la banquise arctique, mais \u00e9galement la fonte des glaciers du Groenland peuvent amener, dans un\n        futur lointain, \u00e0 perturber la circulation thermohaline (qui donne le Gulf Stream). Mais attention, la carte\n        \"Cycle de l'eau\" ne fait pas du tout r\u00e9f\u00e9rence \u00e0 la Circulation thermohaline.\n    </p>\n</div>\n"
+      },
+      "18_22": {
+        "info": "<div class=\"content\">\n    <p>\n        C'est le pi\u00e8ge qui est tendu aux participants dans le lot N\u00b01. Pour cela, ne les incitez pas tout de suite \u00e0\n        lire de verso des cartes, mais attendez qu'ils les aient plac\u00e9es avant de leur proposer de les lire.\n    </p>\n</div>\n"
+      },
+      "18_25": {
+        "info": "<div class=\"content\">\n    <p>\n        Eh oui, le pauvre ours polaire, embl\u00e9matique du changement climatique... Il ne s'agit pas d'un ph\u00e9nom\u00e8ne\n        tellement significatif sur l'\u00e9quilibre de la biodiversit\u00e9 terrestre, mais si les participants font ce lien,\n        proposez-leur de dessiner un ours ! ;-)\n    </p>\n</div>\n"
+      },
+      "1_27": {
+        "info": "<div class=\"content\">\n    <p>\n        Par ce lien, on exprime toutes les d\u00e9gradations que l'Homme est capable d'infliger \u00e0 la vie marine comme la\n        pollution au plastique et la sur-p\u00eache. C'est hors-sujet par rapport au changement climatique, mais c'est\n        int\u00e9ressant de faire le lien quand-m\u00eame.\n    </p>\n</div>\n"
+      },
+      "1_6": {
+        "info": "<div class=\"content\">\n    <p>\n        La d\u00e9forestation peut \u00eatre consid\u00e9r\u00e9e comme une activit\u00e9 humaine ou comme une cons\u00e9quence de l'agriculture ou\n        les deux.\n    </p>\n</div>\n"
+      },
+      "20_19": {
+        "info": "<div class=\"content\">\n    <p>\n        C'est tr\u00e8s technique, mais si on est pointilleux, la partie bleue du graphique de la carte 19 concernant\n        l'Antarctique repr\u00e9sente un gain de masse d\u00fb \u00e0 une augmentation des pr\u00e9cipitations. Les parties rouges\n        repr\u00e9sentent une perte de masse. Au total, l'Antarctique perd de la masse.\n    </p>\n</div>\n"
+      },
+      "20_22": {
+        "info": "<div class=\"content\">\n    <p>\n        Eh non, plus de pluie ne va pas faire d\u00e9border l'oc\u00e9an ! Il est assez rare de voir ce lien, mais on ne sait\n        jamais. Si c'est le cas, demandez aux particpants d'o\u00f9 vient la pluie, ou encore d'o\u00f9 viennent les nuages...\n    </p>\n</div>\n"
+      },
+      "20_30": {
+        "info": "<div class=\"content\">\n    <p>\n        Le manque de pluie et l'\u00e9vaporations sont les causes des s\u00e9cheresses. Dans les deux cas, c'est la perturbation\n        du cycle de l'eau qui est en cause.\n    </p>\n</div>\n"
+      },
+      "20_33": {
+        "info": "<div class=\"content\">\n    <p>\n        Dans les ph\u00e9nom\u00e8nes de submersion, la baisse de pression atmosph\u00e9rique joue un r\u00f4le important. Ces d\u00e9pressions\n        sont une manifestation de la perturbation du cycle de l'eau.\n    </p>\n</div>\n"
+      },
+      "20_34": {
+        "info": "<div class=\"content\">\n    <p>\n        On peut voir les cyclones comme une manifestation du d\u00e9r\u00e8glement du cycle de l'eau.\n    </p>\n</div>\n"
+      },
+      "21_16": {
+        "info": "<div class=\"content\">\n    <p>\n        Oui, dans la version simplifi\u00e9e.\n    </p>\n</div>\n"
+      },
+      "21_17": {
+        "info": "<div class=\"content\">\n    <p>\n        Oui, dans la version simplifi\u00e9e.\n    </p>\n</div>\n"
+      },
+      "21_18": {
+        "info": "<div class=\"content\">\n    <p>\n        Oui, dans la version simplifi\u00e9e.\n    </p>\n</div>\n"
+      },
+      "21_19": {
+        "info": "<div class=\"content\">\n    <p>\n        Oui, dans la version simplifi\u00e9e.\n    </p>\n</div>\n"
+      },
+      "21_20": {
+        "info": "<div class=\"content\">\n    <p>\n        La hausse de la temp\u00e9rature sur terre augmente l'\u00e9vaporation et perturbe le cycle de l'eau. D'ailleur,\n        autrefois, on parlait de r\u00e9chauffement climatique (\"Global Warming\") et aujourd'hui, on parle de changement\n        climatique (Climate Change), voire de d\u00e9r\u00e8glement climatique. Ce shift dans le vocabulaire est mat\u00e9rialis\u00e9 par\n        cette relation qui a donc une importance fondamentale. N'h\u00e9sitez pas \u00e0 faire une remarque sur ce point aux\n        \u00e9quipes.\n    </p>\n</div>\n"
+      },
+      "21_32": {
+        "info": "<div class=\"content\">\n    <p>\n        Dans les pays du Nord, une hausse de la temp\u00e9rature peut am\u00e9liorer les rendements. Dans les pays du Sud, c'est\n        le contraire : la moindre augmentation de temp\u00e9rature se traduit par une baisse de rendement.\n    </p>\n</div>\n"
+      },
+      "25_28": {
+        "info": "<div class=\"content\">\n    <p>\n        Il faut voir les vecteurs de maladie comme un sous-ensemble de la biodiversit\u00e9 terrestre.\n    </p>\n</div>\n"
+      },
+      "25_32": {
+        "info": "<div class=\"content\">\n    <p>\n        Les abeilles et les verres de terre, pour ne citer qu'eux, sont indispensables \u00e0 l'agriculture.\n    </p>\n</div>\n"
+      },
+      "25_8": {
+        "info": "<div class=\"content\">\n    <p>\n        Il serait plus logique de faire un lien vers les rendements agricoles.\n    </p>\n</div>\n"
+      },
+      "26_28": {
+        "info": "<div class=\"content\">\n    <p>\n        Attention aux associations d'id\u00e9es : Crues / mar\u00e9cages / moustiques... Les crues peuvent amener des situations\n        sanitaires d\u00e9grad\u00e9es, mais ce n'est pas de cela qu'on parle quand on \u00e9voque les vecteurs de maladie qui se\n        d\u00e9placent \u00e0 cause du changement climatique.\n    </p>\n</div>\n"
+      },
+      "26_31": {
+        "info": "<div class=\"content\">\n    <p>\n        Les crues peuvent provoquer des d\u00e9bordements de boues toxiques sur des installations industrielles.\n    </p>\n</div>\n"
+      },
+      "26_33": {
+        "info": "<div class=\"content\">\n    <p>\n        Ne pas confondre \"Crues\" et \"Submersions\". Les crues, ce sont les rivi\u00e8res qui d\u00e9bordent (c'est de l'eau douce). Les submersions, c'est la mer qui entre dans les terres (c'est de l'eau sal\u00e9es).\n    </p>\n</div>\n"
+      },
+      "26_38": {
+        "info": "<div class=\"content\">\n    <p>\n        Les crues am\u00e8nent souvent des probl\u00e8mes sanitaires graves : les \u00e9gouts d\u00e9bordent, le chol\u00e9ra menace.\n    </p>\n</div>\n"
+      },
+      "27_37": {
+        "info": "<div class=\"content\">\n    <p>\n        Oui, \u00e0 cause de la p\u00eache...\n    </p>\n</div>\n"
+      },
+      "2_6": {
+        "info": "<div class=\"content\">\n    <p>\n        La surface utilis\u00e9e pour installer des usines n'est pas tr\u00e8s importante par rapport \u00e0 celle qu'il faut pour\n        faire pousser des plantes. Si les participants \u00e9voquent l'industrie du papier, alors OK.\n    </p>\n</div>\n"
+      },
+      "2_9": {
+        "info": "<div class=\"content\">\n    <p>\n        En r\u00e9alit\u00e9, l'industrie est responsable d'autant d'\u00e9missions de m\u00e9thanes que l'agriculture \u00e0 cause des \u00e9missions\n        fugitives (les fuites de gaz naturels dans les pipelines). C'est un point qui est peu connu, donc cette relation\n        n'est pas consid\u00e9r\u00e9e comme incontournable. L'industrie \u00e9met \u00e9galement des HFC (fluides r\u00e9frig\u00e9rants).\n    </p>\n</div>\n"
+      },
+      "30_26": {
+        "info": "<div class=\"content\">\n    <p>\n        Voir la carte 26 : \"Si le sol a \u00e9t\u00e9 durci par une s\u00e9cheresse, c'est pire car l'eau ruisselle.\"\n    </p>\n</div>\n"
+      },
+      "30_32": {
+        "info": "<div class=\"content\">\n    <p>\n        Stress hydrique.\n    </p>\n</div>\n"
+      },
+      "32_37": {
+        "info": "<div class=\"content\">\n    <p>\n        Pour rester en vie il faut boire <em>et</em> manger.\n    </p>\n</div>\n"
+      },
+      "32_39": {
+        "info": "<div class=\"content\">\n    <p>\n        Si l'id\u00e9e est que les gens meurent de faim, alors on passe par la carte famine. Par contre on peut aussi penser\n        aux agriculteurs qui ont perdu leur source de revenus comme cela a \u00e9t\u00e9 le cas au Rwanda.\n    </p>\n</div>\n"
+      },
+      "32_8": {
+        "info": "<div class=\"content\">\n    <p>\n        Effectivement, la baisse des rendements agricoles affecte l'agriculture. Mais la carte agriculture est plut\u00f4t l\u00e0\n        pour incarner les causes des \u00e9missions de GES.\n    </p>\n</div>\n"
+      },
+      "33_32": {
+        "info": "<div class=\"content\">\n    <p>\n        Surtout au niveau des deltas.\n    </p>\n</div>\n"
+      },
+      "33_39": {
+        "info": "<div class=\"content\">\n    <p>\n        La Nouvelle Z\u00e9lande a officiellement accueilli les premiers r\u00e9fugi\u00e9s climatiques en 2004 ?\n    </p>\n</div>\n"
+      },
+      "35_10": {
+        "info": "<div class=\"content\">\n    <p>\n        Ce n'est pas grave si ce lien n'a pas \u00e9t\u00e9 trouv\u00e9.\n    </p>\n</div>\n"
+      },
+      "35_25": {
+        "info": "<div class=\"content\">\n    <p>\n        \u00c7a reste un \u00e9l\u00e9ment mineur., sauf sur des hotspots particuliers de biodiversit\u00e9 mais \u00e7a risque de devenir un vrai\n        sujet \u00e0 l'avenir.\n    </p>\n</div>\n"
+      },
+      "35_32": {
+        "info": "<div class=\"content\">\n    <p>\n        En g\u00e9n\u00e9ral, ce qui br\u00fble bien, c'est la for\u00eat, pas les champs de bl\u00e9, mais \u00e7a peut arriver.\n    </p>\n</div>\n"
+      },
+      "35_38": {
+        "info": "<div class=\"content\">\n    <p>\n        630 disparus suite aux incendies en Californie \u00e0 l'automne 2018.\n    </p>\n</div>\n"
+      },
+      "35_6": {
+        "info": "<div class=\"content\">\n    <p>\n        Certes, mais la carte 6 d\u00e9signe la d\u00e9forestation d'origine humaine.\n    </p>\n</div>\n"
+      },
+      "36_30": {
+        "info": "<div class=\"content\">\n    <p>\n        Une canicule, c'est la temp\u00e9rature, une s\u00e9cheresse, c'est l'humidit\u00e9. Ceci \u00e9tant dit, si il fait chaud, l'eau\n        s'\u00e9vapore et cela peut entra\u00eener une s\u00e9cheresse. Les deux vont de fait souvent ensemble.\n    </p>\n</div>\n"
+      },
+      "36_35": {
+        "info": "<div class=\"content\">\n    <p>\n    </p>\n</div>\n"
+      },
+      "39_38": {
+        "info": "<div class=\"content\">\n    <p>\n        Cf. tous les noy\u00e9s en m\u00e9diterran\u00e9e...\n    </p>\n</div>\n"
+      },
+      "39_40": {
+        "info": "<div class=\"content\">\n    <p>\n        Les d\u00e9placements de population peuvent cr\u00e9er des conflits quelle que soit la cause.\n    </p>\n</div>\n"
+      },
+      "3_10": {
+        "info": "<div class=\"content\">\n    <p>\n        Les b\u00e2timents \u00e9mettent peu d'a\u00e9rosols de mani\u00e8re directe. Les seules \u00e9missions significatives sont les feux de\n        chemin\u00e9e (par exempe, \u00e0 Chamonix, les feux de chemin\u00e9e sont une cause de pollution plus importante que le trafic\n        routier d\u00fb au tunnel).\n    </p>\n    <p>\n        De mani\u00e8re indirecte, via la production d'\u00e9l\u00e9ctricit\u00e9, il est bien responsable d'\u00e9missions de particules.\n    </p>\n</div>\n"
+      },
+      "3_26": {
+        "info": "<div class=\"content\">\n    <p>\n        L'artificialisation des sols est \u00e9galement responsable d'innondations car le sol n'est plus drainant.\n    </p>\n</div>\n"
+      },
+      "3_6": {
+        "info": "<div class=\"content\">\n    <p>\n        On mesure la surface de nos appartements en m<sup>2</sup> alors qu'on parle en ha quand on \u00e9voque l'agriculture.\n        Ce ne sont pas les m\u00eames ordres de grandeur !\n    </p>\n</div>\n"
+      },
+      "40_1": {
+        "info": "<div class=\"content\">\n    <p>\n        C'est \"la boucle du club de Rome\" ! Tout cela finira bien par se r\u00e9guler, mais pas forc\u00e9ment de mani\u00e8re soft.\n        Les participants font souvent ce lien, et proposent parfois de faire un rouleau avec la fresque pour mettre bord\n        \u00e0 bord la fin et le d\u00e9but.\n    </p>\n    <p>\n        D'ailleurs, il est int\u00e9ressant de faire remarque qu'il y a des humains dans les cartes du d\u00e9but et celles de la\n        fin, mais pas au milieu.\n    </p>\n</div>\n"
+      },
+      "40_38": {
+        "info": "<div class=\"content\">\n    <p>\n        Se prendre une balle, c'est pas bon pour la sant\u00e9...\n    </p>\n</div>\n"
+      },
+      "4_10": {
+        "info": "<div class=\"content\">\n    <p>\n        Le pollution locale que repr\u00e9sentent les \u00e9chapement des voitures est une motivation forte pour pousser la\n        voiture \u00e9lectrique. Or cette derni\u00e8re est responsable d'\u00e9missions de CO2 dues \u00e0 la g\u00e9n\u00e9ration de l'\u00e9lectricit\u00e9\n        elle-m\u00eame (selon le mix \u00e9lectrique du pays consid\u00e9r\u00e9). Voir la fiche th\u00e9matique sur la voiture \u00e9lectrique.\n    </p>\n</div>\n"
+      },
+      "4_6": {
+        "info": "<div class=\"content\">\n    <p>\n        Les surfaces utilis\u00e9es par les routes sont minimes par rapport \u00e0 celles utilis\u00e9es par l'agriculture. Les routes\n        sont en une dimension, l'agriculture est en deux D.\n    </p>\n</div>\n"
+      },
+      "5_1": {
+        "info": "<div class=\"content\">\n    <p>\n        On peut consid\u00e9rer que l'utilisation des \u00e9nergies fossiles est une cons\u00e9quence des activit\u00e9es humaines ou que\n        les \u00e9nergies fossiles permettent les activit\u00e9s humaines. C'est comme la poule et l'\u0153uf, c'est une question de\n        point de vue. Ne pas perdre de temps sur ce d\u00e9bat. L'int\u00e9r\u00eat du jeu est dans la suite.\n    </p>\n</div>\n"
+      },
+      "5_2": {
+        "info": "<div class=\"content\">\n    <p>\n        Voir relation 5 vers 1.\n    </p>\n</div>\n"
+      },
+      "5_3": {
+        "info": "<div class=\"content\">\n    <p>\n        Voir relation 5 vers 1.\n    </p>\n</div>\n"
+      },
+      "5_4": {
+        "info": "<div class=\"content\">\n    <p>\n        Voir relation 5 vers 1.\n    </p>\n</div>\n"
+      },
+      "5_40": {
+        "info": "<div class=\"content\">\n    <p>\n        Rien \u00e0 voir avec le changement climatique, mais en effet, un grand nombre de conflits arm\u00e9s sont li\u00e9es \u00e0 l'acc\u00e8s\n        aux ressources, notamment aux \u00e9nergies fossiles et en particulier le p\u00e9trole.\n    </p>\n</div>\n"
+      },
+      "5_7": {
+        "info": "<div class=\"content\">\n    <p>\n        C'est \u00e9crit sur la carte 7 !\n    </p>\n</div>\n"
+      },
+      "6_12": {
+        "info": "<div class=\"content\">\n    <p>\n        Les participants pensent souvent que la d\u00e9forestation r\u00e9duit les puits de carbone. En r\u00e9alit\u00e9, l'impact est\n        minime car les zones d\u00e9forest\u00e9es repr\u00e9sentent une toute petite partie de la surface totale de for\u00eat. Par contre\n        le CO<sub>2</sub> d\u00e9gag\u00e9 est tr\u00e8s important. Le bon lien est donc avec la carte 7.\n    </p>\n</div>\n"
+      },
+      "6_7": {
+        "info": "<div class=\"content\">\n    <p>\n        C'est \u00e9crit sur la carte 7 !\n    </p>\n</div>\n"
+      },
+      "7_11": {
+        "info": "<div class=\"content\">\n    <p>\n        Pourquoi pas, mais il faut plut\u00f4t faire un lien entre la carte 12 (Puits de Carbone) et la 11.\n    </p>\n</div>\n"
+      },
+      "7_12": {
+        "info": "<div class=\"content\">\n    <p>\n        Les deux cartes se mettre bord \u00e0 bord pour faire un m\u00eame graphique. C'est ce qu'il faut r\u00e9ussir \u00e0 leur faire\n        trouver : \"Regardez la carte 12: qu'est-ce que vous voyez de bizarre ?\" \"C'est \u00e9crit \u00e0 l'envers !\" \"Exactement.\n        C'est une \u00e9nigme \u00e0 r\u00e9soudre. La solution est sur la table.\"\n    </p>\n</div>\n"
+      },
+      "7_24": {
+        "info": "<div class=\"content\">\n    <p>\n        Pourquoi pas, mais il faut plut\u00f4t faire un lien entre la carte 12 (Puits de carbone) et la 24.\n    </p>\n</div>\n"
+      },
+      "8_10": {
+        "info": "<div class=\"content\">\n    <p>\n        Dans l'absolu, c'est vrai : les \u00e9pandages font des a\u00e9rosols qui entrent en ligne de compte dans les pollutions\n        locales aux alentours, mais c'est beaucoup moins important que la combustion incompl\u00e8te des centrales\n        thermiques.\n    </p>\n</div>\n"
+      },
+      "8_12": {
+        "info": "<div class=\"content\">\n    <p>\n        Ce n'est pas grave si ce lien n'est pas fait, mais il est vrai que l'agriculture peut am\u00e9liorer la capacit\u00e9 de\n        stockage via la photosynth\u00e8se. C'est le principe du 1 pour 1000 (si on augmentait ne serait-ce que de 1/1000 la\n        capacit\u00e9 du sol \u00e0 s\u00e9questrer du carbone, on aurait un impact important sur le CO2).\n    </p>\n</div>\n"
+      },
+      "8_25": {
+        "info": "<div class=\"content\">\n    <p>\n        On pense ici surtout aux pesticides (notamment au round-up ou aux n\u00e9onicotino\u00efdes). Pas de lien avec le climat,\n        mais relation int\u00e9ressante \u00e0 faire.\n    </p>\n</div>\n"
+      },
+      "8_5": {
+        "info": "<div class=\"content\">\n    <p>\n        L'agriculture n'utilise pas beaucoup d'\u00e9nergies fossiles. Tout juste un peu d'essence pour mettre dans les\n        tracteurs. Attention, \u00e7a ne veut pas dire qu'elle n'a pas une empreinte carbone importante, mais c'est surtout\n        du m\u00e9thane et du protoxyde d'azote (lire les cartes 8 et 9).\n    </p>\n</div>\n"
+      },
+      "8_6": {
+        "info": "<div class=\"content\">\n    <p>\n        La d\u00e9forestation est li\u00e9e \u00e0 80% \u00e0 l'agriculture, donc oui. Elle peut \u00eatre consid\u00e9r\u00e9e comme une activit\u00e9 humaine\n        ou comme une cons\u00e9quence de la d\u00e9forestation ou les deux.\n    </p>\n</div>\n"
+      },
+      "8_7": {
+        "info": "<div class=\"content\">\n    <p>\n        L'agriculture \u00e9met peu de CO2 \u00e0 part \u00e0 travers la d\u00e9forestation. Son empreinte carbone est surtout due aux\n        autres GES.\n    </p>\n</div>\n"
+      },
+      "8_9": {
+        "info": "<div class=\"content\">\n    <p>\n        Les images en fond de carte n\u00b09 devraient les mettre sur la voie !\n    </p>\n</div>\n"
+      },
+      "9_13": {
+        "info": "<div class=\"content\">\n    <p>\n        Le \"E\" et le \"S\" de la carte 9 sont \u00e0 mettre en lien avec \"Effet de Serre\" de la carte 13.\n    </p>\n</div>\n"
+      }
+    },
     "explanations": {
       "card": "Carte",
       "effects": "Effet(s)",
+      "elt_placeholder": "\u00c9l\u00e9ment",
       "moreInfo": "En savoir plus...",
-      "origins": "Origine(s)"
+      "origins": "Origine(s)",
+      "relation": "Relation"
     },
     "fullName": "Fran\u00e7ais",
     "mainWebsite": "https://fresqueduclimat.org/",
@@ -4347,9 +4597,7 @@
             "simplified": []
           },
           "origins": {
-            "false": [
-              "21"
-            ],
+            "false": [],
             "major": [
               "14"
             ],
@@ -4405,7 +4653,6 @@
           "effects": {
             "false": [
               "13",
-              "20",
               "20",
               "22"
             ],
@@ -4516,7 +4763,6 @@
           },
           "origins": {
             "false": [
-              "18",
               "18"
             ],
             "major": [
@@ -4537,9 +4783,7 @@
         "moreInfo": "<div class=content><p> Cette carte peut jouer deux r\u00f4les&nbsp;: </p><ul><li> Soit c'est la temp\u00e9rature de l'air, donc de l'atmosph\u00e8re. C'est comme \u00e7a qu'il faut l'interpr\u00e9ter quand on a gard\u00e9 les cartes 10, 14 et 15. Dans ce cas, la carte pr\u00e9c\u00e9dente est la 14. </li><li> Soit elle repr\u00e9sente la temp\u00e9rature de la terre (et \u00e7a tombe bien parce que la d\u00e9finition de la temp\u00e9rature de la terre, c'est justement la temp\u00e9rature de l'air, au sol, en moyenne sur la surface de la terre). Dans ce cas, la carte pr\u00e9c\u00e9dente est la 13 et on peut faire un lien vers les cartes 16, 17, 18 et 19. </li></ul><p> Rappel&nbsp;: dans le pr\u00e9sent document, les fl\u00e8ches bleues sont celles qui correspondent au cas o\u00f9 l'on a enlev\u00e9 les cartes 10, 14 et 15. </p><p> Sur le graphique, le z\u00e9ro est au niveau de la temp\u00e9rature en 2010. Pour obtenir les 2&nbsp;\u00b0C du sc\u00e9nario bleu fonc\u00e9, il faut donc additionner les \u00e9carts T(2010)-T(1900) = 1,4&nbsp;\u00b0C et T(2100) - T (2010) =0,6&nbsp;\u00b0C </p><p> On repr\u00e9sente en g\u00e9n\u00e9ral les graphiques de temp\u00e9rature sous forme d'anomalie de temp\u00e9rature, c'est-\u00e0-dire d'un \u00e9cart \u00e0 une temp\u00e9rature de r\u00e9f\u00e9rence. </p></div>",
         "relations": {
           "effects": {
-            "false": [
-              "16"
-            ],
+            "false": [],
             "major": [
               "20",
               "25",
