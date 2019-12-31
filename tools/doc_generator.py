@@ -2,6 +2,7 @@
 """Generate final documentation and data from sources."""
 
 from collections import defaultdict
+from functools import total_ordering
 from itertools import chain
 import json
 from operator import itemgetter
@@ -32,6 +33,7 @@ REL_TYPES = {"major", "minor", "false", "simplified"}
 AVAIL_LANGUAGES = ("fr", "en", "de", "es")
 
 
+@total_ordering
 class Edge:
     """Edge interface."""
 
@@ -40,16 +42,34 @@ class Edge:
         self.ffrom = kwargs["from"]
         self.to = kwargs["to"]
         self.relation = kwargs["relation"]
+        self.info = defaultdict(lambda: None)
 
     def render_visjs(self):
         """Render as dict, dedicated to website."""
         return {
-            "from": self.ffrom,
-            "to": self.to,
-            "relation": self.relation,
+            'from': self.ffrom,
+            'to': self.to,
+            'relation': self.relation,
         }
 
+    def render_doc(self, language):
+        """Render as dict for generic documentation, with info, more_info, etc."""
+        return {'info': self.info[language]}
 
+    def __eq__(self, other):
+        """Implement equality comparison, for sorting purposes."""
+        if isinstance(other, self.__class__):
+            return int(self.ffrom) == int(other.ffrom) and int(self.to) == int(other.to)
+        raise NotImplementedError
+
+    def __lt__(self, other):
+        """Implement lower than, for sorting purposes."""
+        if isinstance(other, self.__class__):
+            return (int(self.ffrom), int(self.to)) < (int(other.ffrom), int(other.to))
+        raise NotImplementedError
+
+
+@total_ordering
 class Node:
     """Node interface."""
 
@@ -95,6 +115,18 @@ class Node:
             out['moreInfo'] = out.pop('more_info')
         return out
 
+    def __eq__(self, other):
+        """Implement equality comparison, for sorting purposes."""
+        if isinstance(other, self.__class__):
+            return int(self.id) == int(other.id)
+        raise NotImplementedError
+
+    def __lt__(self, other):
+        """Implement lower than, for sorting purposes."""
+        if isinstance(other, self.__class__):
+            return self.id < other.id
+        raise NotImplementedError
+
 
 def get_relations(edges):
     """Create cards relations in a dict with card_ids keys."""
@@ -111,6 +143,16 @@ def get_relations(edges):
             cards_rel[edge.to]['origins'][importance].append(edge.ffrom)
 
     return cards_rel
+
+
+def fill_edges_with_text(edge_struct, language):
+    """Fill the edges with text elements (info)."""
+    for edges in edge_struct.values():
+        for edge in edges:
+            candidate_file = SRC_DATA / language / f'edge_info_{edge.ffrom}_{edge.to}.html'
+            if candidate_file.exists():
+                with candidate_file.open() as edge_fh:
+                    edge.info[language] = edge_fh.read()
 
 
 def fill_nodes_with_text(nodes, language):
@@ -135,8 +177,8 @@ def build_data(known_languages):
         primary_data = json.load(base_fh)
 
     edge_struct = {}
-    for relation, edges in primary_data['edges'].items():
-        edge_struct[relation] = [Edge(relation=relation, **edge) for edge in edges]
+    for relation_type, edges in primary_data['edges'].items():
+        edge_struct[relation_type] = [Edge(relation=relation_type, **edge) for edge in edges]
     cards_rel = get_relations(edge_struct)
 
     nodes = [Node(**node) for node in primary_data['nodes']]
@@ -146,11 +188,12 @@ def build_data(known_languages):
 
     for language in known_languages:
         fill_nodes_with_text(nodes, language)
+        fill_edges_with_text(edge_struct, language)
 
     return edge_struct, nodes
 
 
-def render_translations(nodes):
+def render_translations(nodes, edge_struct):
     """Render the json translations' file."""
     formatted_nodes = {}
     translation = {}
@@ -160,8 +203,17 @@ def render_translations(nodes):
 
         with (SRC_DATA / language / 'component_names.json').open() as comp_fh:
             translation[language] = json.load(comp_fh)
+
         translation[language]['nodes'] = {
             node.id: node.render_doc(language, snake_case=False) for node in nodes
+        }
+
+        flatten_edges = [edge for edges in edge_struct.values() for edge in edges]
+        flatten_edges.sort()
+        translation[language]['edges'] = {
+            f'{edge.ffrom}_{edge.to}': edge.render_doc(language)
+            for edge in flatten_edges
+            if edge.info[language]
         }
 
     with TRANSLATIONS_JSON.open('w') as translations_fh:
@@ -218,7 +270,7 @@ def render_visjs(edges, nodes):
 def render(edges, nodes):
     """Render all elements."""
     render_visjs(edges, nodes)
-    render_translations(nodes)
+    render_translations(nodes, edges)
 
     for language in AVAIL_LANGUAGES:
         file_basename = 'documentation'
