@@ -4,10 +4,12 @@
 from collections import defaultdict
 from functools import total_ordering
 from itertools import chain
+from html.parser import HTMLParser
 import json
 from operator import itemgetter
 from pathlib import Path
-from textwrap import wrap
+import re
+from textwrap import wrap, fill
 import subprocess
 
 import htmlmin
@@ -31,11 +33,65 @@ GRAPH_JSON = PUBLIC_DATA / 'content' / 'graph.json'
 REL_TYPES = {'major': 'success', 'minor': 'warning', 'false': 'danger', 'simplified': 'info'}
 
 AVAIL_LANGUAGES = ('fr', 'en', 'de', 'es')
+AVAIL_LANGUAGES = ('fr',)
+
+
+class HtmlToLatex(HTMLParser):
+    start_map = {
+        'ul': '\n\\begin{itemize}\n',
+        'li': '\\item ',
+        'sup': '\\textsuperscript{',
+        'sub': '\\textsubscript{',
+        'em': ' \\emph{',
+        'p': '\n\n'
+    }
+
+    end_map = {
+        'ul': '\\end{itemize}\n\n',
+        'li': '\n',
+        'sup': '}',
+        'sub': '}',
+        'em': '} ',
+        'p': '\n\n'
+    }
+
+    def __init__(self):
+        super().__init__()
+        self.latex = ''
+
+    def handle_starttag(self, tag, attrs):
+        try:
+            self.latex += self.start_map[tag]
+        except KeyError:
+            pass
+
+    def handle_endtag(self, tag):
+        try:
+            self.latex += self.end_map[tag]
+        except KeyError:
+            pass
+
+    def handle_data(self, data):
+        data = data.replace('\n', ' ')
+        data = re.sub(' +', ' ', data)
+
+        if data:
+            self.latex += data
+
+    def parse(self, html):
+        self.feed(html)
+        lines = '\n'.join([fill(line.strip(), 100) for line in self.latex.split('\n')])
+        lines = re.sub('\n{3,}', '\n\n', lines, flags=re.MULTILINE)
+        self.reset()
+        self.latex = ''
+        return lines.replace('%', '\\%')
 
 
 @total_ordering
 class Edge:
     """Edge interface."""
+
+    html2tex = HtmlToLatex()
 
     def __init__(self, **kwargs):
         """Init the object."""
@@ -61,6 +117,14 @@ class Edge:
         """Render as dict for generic documentation, with info, more_info, etc."""
         return {**self.render_visjs(), 'info': self.info[language]}
 
+    def render_tex(self, language, snake_case=True):
+        """Render as dict for generic documentation, with info, more_info, etc."""
+        if self.info[language]:
+            info = self.html2tex.parse(self.info[language])
+        else:
+            info = None
+        return {**self.render_visjs(), 'info': info}
+
     def __eq__(self, other):
         """Implement equality comparison, for sorting purposes."""
         if isinstance(other, self.__class__):
@@ -77,6 +141,8 @@ class Edge:
 @total_ordering
 class Node:
     """Node interface."""
+
+    html2tex = HtmlToLatex()
 
     def __init__(self, **kwargs):
         """Init the object."""
@@ -113,7 +179,7 @@ class Node:
             'title': self.title[language],
             'info': self.info[language],
             'wrapped_title': '\\n'.join(wrap(self.title[language], width=17)),
-            'more_info': self.more_info[language],
+            'more_info': self.more_info[language].replace('&', ' '),
         }
         if not snake_case:
             out['wrappedTitle'] = out.pop('wrapped_title')
@@ -123,6 +189,13 @@ class Node:
     def render_html(self, language, snake_case=True):
         """Render as dict for generic documentation, with info, more_info, etc."""
         return self.render_doc(language, snake_case)
+
+    def render_tex(self, language, snake_case=True):
+        """Render as dict for generic documentation, with info, more_info, etc."""
+        return {
+            **self.render_doc(language, snake_case),
+            'more_info': self.html2tex.parse(self.more_info[language])
+        }
 
     def __eq__(self, other):
         """Implement equality comparison, for sorting purposes."""
@@ -229,13 +302,38 @@ def render_translations(nodes, edge_struct):
         json.dump(translation, translations_fh, sort_keys=True, indent=2)
 
 
-def render_html(file_basename, nodes, edges_struct, language):
+def render_tex(file_basename, nodes, flatten_edges, language):
+    """Render the html version of the documentation."""
+    j2_env = Environment(
+        block_start_string='\BLOCK{',
+        block_end_string='}',
+        variable_start_string='\VAR{',
+        variable_end_string='}',
+        comment_start_string='\#{',
+        comment_end_string='}',
+        line_statement_prefix='%%',
+        line_comment_prefix='%#',
+        trim_blocks=True,
+        autoescape=False,
+        loader=FileSystemLoader('templates'),
+    )
+    template = j2_env.get_template(f'{file_basename}.tex.j2')
+
+    rendered_template = template.render(
+        cards=[node.render_tex(language) for node in nodes],
+        relations=[edge.render_tex(language) for edge in flatten_edges],
+        language=language,
+        color_mapping=REL_TYPES,
+    )
+
+    with (DOC_DATA / f'{file_basename}_{language}.tex').open('w') as tex_fh:
+        tex_fh.write(rendered_template)
+
+
+def render_html(file_basename, nodes, flatten_edges, language):
     """Render the html version of the documentation."""
     j2_env = Environment(loader=FileSystemLoader('templates'))
     template = j2_env.get_template(f'{file_basename}.html.j2')
-
-    flatten_edges = [edge for edges in edges_struct.values() for edge in edges]
-    flatten_edges.sort()
 
     rendered_template = template.render(
         cards=[node.render_html(language) for node in nodes],
@@ -266,6 +364,11 @@ def render_pdf(file_basename, language):
         DOC_DATA / f'{file_basename}_{language}.html',
         DOC_DATA / f'{file_basename}_{language}.pdf',
     )
+    command = (
+        'xelatex',
+        '-synctex=1', '-interaction=nonstopmode',
+        DOC_DATA / f'{file_basename}_{language}.tex',
+    )
     print(' '.join(map(str, command)))
     subprocess.run(command, cwd=DOC_DATA, check=True)
 
@@ -283,14 +386,18 @@ def render_visjs(edges, nodes):
         json.dump(graph_data, graph_fh, sort_keys=True, indent=2)
 
 
-def render(edges, nodes):
+def render(edges_struct, nodes):
     """Render all elements."""
-    render_visjs(edges, nodes)
-    render_translations(nodes, edges)
+    render_visjs(edges_struct, nodes)
+    render_translations(nodes, edges_struct)
+
+    flatten_edges = [edge for edges in edges_struct.values() for edge in edges]
+    flatten_edges.sort()
 
     for language in AVAIL_LANGUAGES:
         file_basename = 'documentation'
-        render_html(file_basename, nodes, edges, language)
+        render_tex(file_basename, nodes, flatten_edges, language)
+        render_html(file_basename, nodes, flatten_edges, language)
         render_pdf(file_basename, language)
 
 

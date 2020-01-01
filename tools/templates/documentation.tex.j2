@@ -1,0 +1,146 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{libertine}
+
+\usepackage[a4paper, left=1.3cm, right=1.3cm, top=2cm, bottom=2cm]{geometry}
+\setlength{\columnsep}{1.3cm}
+
+\usepackage{xunicode}
+\usepackage{xltxtra}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\usepackage{graphicx}
+
+\defaultfontfeatures{Ligatures=TeX}
+%\setmainfont{Linux Libertine O}
+%\setsansfont{Linux Biolinum O}
+
+\usepackage[explicit]{titlesec}
+
+% couleurs, graphiques, dessins
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations,backgrounds,positioning,calc}
+
+\definecolor{successColor}{RGB}{53,172,94}
+\definecolor{warningColor}{RGB}{255,221,87}
+\definecolor{dangerColor}{RGB}{255,56,96}
+\definecolor{infoColor}{RGB}{32,156,238}
+\definecolor{bulmaGreen}{RGB}{0,209,178}
+
+
+
+\newcommand\Section[4]{%
+    \begin{tikzpicture}%
+    \path[fill=bulmaGreen] (0,0) rectangle ++(\columnwidth,2em);%
+    \node[text=black] at (0.5\columnwidth,1em) {\scshape\bfseries\large #4};%
+    \end{tikzpicture}%
+}
+
+\titleformat{\section}{\normalfont}{}{0em}{\Section{east}{west}{0\paperwidth}{#1}}
+
+\raggedbottom
+\widowpenalty10000
+\clubpenalty10000
+
+\usepackage[xetex]{hyperref}
+\usepackage{multicol}
+
+\begin{document}
+\sffamily
+
+\tableofcontents
+
+\part{Cartes}
+
+\begin{multicols}{2}
+
+\BLOCK{ for card in cards -}
+\phantomsection
+\addcontentsline{toc}{subsection}{\VAR{card.id} - \VAR{card.title}}
+\section*{\VAR{card.id} - \VAR{card.title}}
+\nopagebreak[4]
+
+\noindent
+\includegraphics[width=3.8cm]{../images/\VAR{ language }/node_recto_\VAR{ card.id }.jpg}
+\hfill
+\includegraphics[width=3.8cm]{../images/\VAR{ language }/node_verso_\VAR{ card.id }.jpg}
+
+\nopagebreak[4]
+
+\bigskip
+
+\noindent
+\begin{minipage}{0.4\columnwidth}\begin{flushleft}
+\BLOCK{ for importance, origins in card.relations.origins.items() -}
+\BLOCK{ for origin in origins -}
+
+\raisebox{-4.5mm}{%
+\includegraphics[width=2cm]{../images/\VAR{ language }/node_recto_\VAR{ origin }.jpg}%
+}
+\hfill
+\tikz\draw[-latex,line width=1mm,\VAR{color_mapping[importance]}Color] %
+(0,0) node[black, anchor=east] {\VAR{ origin }}-- (6mm,0) ;
+
+\BLOCK{ endfor -}
+\BLOCK{ endfor -}
+\end{flushleft}\end{minipage}
+%
+\hfill
+%
+\begin{minipage}{0.4\columnwidth}\begin{flushright}
+\BLOCK{ for importance, effects in card.relations.effects.items() -}
+\BLOCK{ for effect in effects -}
+\tikz\draw[-latex,line width=1mm,\VAR{color_mapping[importance]}Color] %
+(0,0) -- (6mm,0) node[black, anchor=west] {\VAR{ effect }};
+\hfill
+\raisebox{-4.5mm}{%
+\includegraphics[width=2cm]{../images/\VAR{ language }/node_recto_\VAR{ effect }.jpg}%
+}
+
+\BLOCK{ endfor -}
+\BLOCK{ endfor -}
+\end{flushright}\end{minipage}
+
+\bigskip
+
+\VAR{ card.more_info | safe }
+\vfill\null
+\columnbreak
+\BLOCK{ endfor -}
+
+\clearpage
+
+\part{Relations}
+
+\BLOCK{ for relation in relations -}
+\section*{%
+\tikz\draw[-latex,line width=1mm,\VAR{color_mapping[relation.relation]}Color]%
+ (0,0) node[black, anchor=east] {\VAR{ relation.from }}%
+ -- (10mm,0) node[black, anchor=west] {\VAR{ relation.to }};%
+}
+\nopagebreak[4]
+\noindent
+\includegraphics[width=2cm]{../images/\VAR{ language }/node_verso_\VAR{ relation.from }.jpg}
+\includegraphics[width=2cm]{../images/\VAR{ language }/node_recto_\VAR{ relation.from }.jpg}
+%
+\hfill
+%
+\includegraphics[width=2cm]{../images/\VAR{ language }/node_recto_\VAR{ relation.to }.jpg}
+\includegraphics[width=2cm]{../images/\VAR{ language }/node_verso_\VAR{ relation.to }.jpg}
+\newline
+\BLOCK{ if relation.info }
+\nopagebreak[4]
+\VAR{ relation.info | safe }
+\BLOCK{ endif -}
+
+
+\BLOCK{ endfor -}
+
+\end{multicols}
+\end{document}
