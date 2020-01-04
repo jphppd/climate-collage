@@ -37,5 +37,5 @@ export const isQuiz = (window) => {
   if (correction) {
     return !((correction === '1') || (correction === 'true') || (correction === 't'));
   }
-  return true;
+  return false;
 };
