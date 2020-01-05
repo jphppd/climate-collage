@@ -4,7 +4,6 @@
 \usepackage{libertine}
 
 \usepackage[a4paper, left=1.3cm, right=1.3cm, top=2cm, bottom=2cm]{geometry}
-\setlength{\columnsep}{1.3cm}
 
 \usepackage{xunicode}
 \usepackage{xltxtra}
@@ -37,8 +36,8 @@
 
 \newcommand\Section[4]{%
     \begin{tikzpicture}%
-    \path[fill=bulmaGreen] (0,0) rectangle ++(\columnwidth,2em);%
-    \node[text=black] at (0.5\columnwidth,1em) {\scshape\bfseries\large #4};%
+    \path[fill=bulmaGreen] (0,0) rectangle ++(\textwidth,2em);%
+    \node[text=black] at (0.5\textwidth,1em) {\scshape\bfseries\large #4};%
     \end{tikzpicture}%
 }
 
@@ -49,7 +48,6 @@
 \clubpenalty10000
 
 \usepackage[xetex]{hyperref}
-\usepackage{multicol}
 
 \begin{document}
 \sffamily
@@ -58,25 +56,19 @@
 
 \part{Cartes}
 
-\begin{multicols}{2}
-
 \BLOCK{ for card in cards -}
 \phantomsection
 \addcontentsline{toc}{subsection}{\VAR{card.id} - \VAR{card.title}}
 \section*{\VAR{card.id} - \VAR{card.title}}
 \nopagebreak[4]
-
+%
+\noindent
+\begin{minipage}[t]{0.2\textwidth}\begin{flushleft}
 \noindent
 \includegraphics[width=3.8cm]{../images/\VAR{ language }/node_recto_\VAR{ card.id }.jpg}
-\hfill
-\includegraphics[width=3.8cm]{../images/\VAR{ language }/node_verso_\VAR{ card.id }.jpg}
 
-\nopagebreak[4]
+\medskip
 
-\bigskip
-
-\noindent
-\begin{minipage}{0.4\columnwidth}\begin{flushleft}
 \BLOCK{ for importance, origins in card.relations.origins.items() -}
 \BLOCK{ for origin in origins -}
 
@@ -93,7 +85,19 @@
 %
 \hfill
 %
-\begin{minipage}{0.4\columnwidth}\begin{flushright}
+\begin{minipage}[t]{0.5\textwidth}
+\smallskip
+\VAR{ card.more_info | safe }
+\end{minipage}
+%
+\hfill
+%
+\begin{minipage}[t]{0.2\textwidth}\begin{flushright}
+\noindent
+\includegraphics[width=3.8cm]{../images/\VAR{ language }/node_verso_\VAR{ card.id }.jpg}
+
+\medskip
+
 \BLOCK{ for importance, effects in card.relations.effects.items() -}
 \BLOCK{ for effect in effects -}
 \tikz\draw[-latex,line width=1mm,\VAR{color_mapping[importance]}Color] %
@@ -107,11 +111,8 @@
 \BLOCK{ endfor -}
 \end{flushright}\end{minipage}
 
-\bigskip
+\vfill\vfill\vfill\null
 
-\VAR{ card.more_info | safe }
-\vfill\null
-\columnbreak
 \BLOCK{ endfor -}
 
 \clearpage
@@ -139,8 +140,7 @@
 \VAR{ relation.info | safe }
 \BLOCK{ endif -}
 
-
+\medskip
 \BLOCK{ endfor -}
 
-\end{multicols}
 \end{document}
