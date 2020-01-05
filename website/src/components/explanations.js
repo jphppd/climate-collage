@@ -71,15 +71,17 @@ const RelationColumn = ({ ...props }) => (
         ' → ' +
         props.relationTo}
     </h1>
-    <div
-      className="has-text-justified"
-      id="explanation-content"
-      dangerouslySetInnerHTML={{
-        __html: props.relationId
-          ? I18n.t(`edges.${props.relationId}.info`)
-          : null
-      }}
-    />
+    {props.relationDescription ? (
+      <div
+        className="has-text-justified"
+        id="explanation-content"
+        dangerouslySetInnerHTML={{
+          __html: props.relationId
+            ? I18n.t(`edges.${props.relationId}.info`)
+            : null
+        }}
+      />
+    ) : null}
   </div>
 );
 
@@ -164,13 +166,14 @@ const fillCardInfo = (state, cardId) => {
 
 const fillRelationInfo = (state, relationId) => {
   const [origin, effect] = relationId.split('_');
-
   return {
     relationId: relationId,
     relationFrom: origin,
     relationTo: effect,
     origins: [{ nodeId: origin }],
-    effects: [{ nodeId: effect }]
+    effects: [{ nodeId: effect }],
+    relationDescription:
+      state.i18n.translations[state.i18n.locale].edges[relationId]
   };
 };
 
