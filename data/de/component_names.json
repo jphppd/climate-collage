@@ -1,0 +1,30 @@
+{
+  "fullName": "Deutsch",
+  "climateCollage": "The Climate Collage (engl.)",
+  "mainWebsite": "https://climatecollage.org/",
+  "explanations": {
+    "origins": "Ursache(n)",
+    "card": "Karte",
+    "effects": "Wirkung(en)",
+    "moreInfo": "Weitere Informationen..."
+  },
+  "selector": {
+    "language": "Sprache",
+    "links": "Links",
+    "dl_doc": "PDF-Erläuterungen öffnen",
+    "filters": {
+      "name": "Auswahl",
+      "cards": "Karten",
+      "relations": "Beziehungen",
+      "batch1": "Stapel 1",
+      "batch12": "Stapel 1 - 2",
+      "batch123": "Stapel 1 - 3",
+      "batch1234": "Stapel 1 - 4",
+      "batch12345": "Stapel 1 - 5",
+      "major": "Haupt-",
+      "minor": "Neben-",
+      "false": "Irrtümliche",
+      "simplified": "Vereinfachte"
+    }
+  }
+}
