@@ -4,7 +4,9 @@
   "mainWebsite": "https://climatecollage.org/",
   "explanations": {
     "origins": "Ursache(n)",
+    "elt_placeholder": "Element",
     "card": "Karte",
+    "relation": "Beziehung",
     "effects": "Wirkung(en)",
     "moreInfo": "Weitere Informationen..."
   },

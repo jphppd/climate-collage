@@ -4,7 +4,9 @@
   "mainWebsite": "https://fresqueduclimat.org/",
   "explanations": {
     "origins": "Origine(s)",
+    "elt_placeholder": "Élément",
     "card": "Carte",
+    "relation": "Relation",
     "effects": "Effet(s)",
     "moreInfo": "En savoir plus..."
   },

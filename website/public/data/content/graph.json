@@ -2,666 +2,787 @@
   "edges": [
     {
       "from": "1",
+      "id": "1_2",
       "relation": "major",
       "to": "2"
     },
     {
       "from": "1",
+      "id": "1_3",
       "relation": "major",
       "to": "3"
     },
     {
       "from": "1",
+      "id": "1_4",
       "relation": "major",
       "to": "4"
     },
     {
       "from": "1",
+      "id": "1_6",
       "relation": "major",
       "to": "6"
     },
     {
       "from": "1",
+      "id": "1_8",
       "relation": "major",
       "to": "8"
     },
     {
       "from": "2",
+      "id": "2_5",
       "relation": "major",
       "to": "5"
     },
     {
       "from": "2",
+      "id": "2_10",
       "relation": "major",
       "to": "10"
     },
     {
       "from": "3",
+      "id": "3_5",
       "relation": "major",
       "to": "5"
     },
     {
       "from": "4",
+      "id": "4_5",
       "relation": "major",
       "to": "5"
     },
     {
       "from": "4",
+      "id": "4_10",
       "relation": "major",
       "to": "10"
     },
     {
       "from": "5",
+      "id": "5_7",
       "relation": "major",
       "to": "7"
     },
     {
       "from": "6",
+      "id": "6_7",
       "relation": "major",
       "to": "7"
     },
     {
       "from": "7",
+      "id": "7_12",
       "relation": "major",
       "to": "12"
     },
     {
       "from": "8",
+      "id": "8_6",
       "relation": "major",
       "to": "6"
     },
     {
       "from": "8",
+      "id": "8_9",
       "relation": "major",
       "to": "9"
     },
     {
       "from": "9",
+      "id": "9_13",
       "relation": "major",
       "to": "13"
     },
     {
       "from": "10",
+      "id": "10_15",
       "relation": "major",
       "to": "15"
     },
     {
       "from": "10",
+      "id": "10_38",
       "relation": "major",
       "to": "38"
     },
     {
       "from": "11",
+      "id": "11_13",
       "relation": "major",
       "to": "13"
     },
     {
       "from": "12",
+      "id": "12_11",
       "relation": "major",
       "to": "11"
     },
     {
       "from": "12",
+      "id": "12_24",
       "relation": "major",
       "to": "24"
     },
     {
       "from": "13",
+      "id": "13_15",
       "relation": "major",
       "to": "15"
     },
     {
       "from": "14",
+      "id": "14_16",
       "relation": "major",
       "to": "16"
     },
     {
       "from": "14",
+      "id": "14_17",
       "relation": "major",
       "to": "17"
     },
     {
       "from": "14",
+      "id": "14_18",
       "relation": "major",
       "to": "18"
     },
     {
       "from": "14",
+      "id": "14_19",
       "relation": "major",
       "to": "19"
     },
     {
       "from": "14",
+      "id": "14_21",
       "relation": "major",
       "to": "21"
     },
     {
       "from": "15",
+      "id": "15_14",
       "relation": "major",
       "to": "14"
     },
     {
       "from": "16",
+      "id": "16_22",
       "relation": "major",
       "to": "22"
     },
     {
       "from": "16",
+      "id": "16_31",
       "relation": "major",
       "to": "31"
     },
     {
       "from": "17",
+      "id": "17_20",
       "relation": "major",
       "to": "20"
     },
     {
       "from": "17",
+      "id": "17_22",
       "relation": "major",
       "to": "22"
     },
     {
       "from": "17",
+      "id": "17_27",
       "relation": "major",
       "to": "27"
     },
     {
       "from": "17",
+      "id": "17_34",
       "relation": "major",
       "to": "34"
     },
     {
       "from": "17",
+      "id": "17_42",
       "relation": "major",
       "to": "42"
     },
     {
       "from": "19",
+      "id": "19_22",
       "relation": "major",
       "to": "22"
     },
     {
       "from": "20",
+      "id": "20_25",
       "relation": "major",
       "to": "25"
     },
     {
       "from": "20",
+      "id": "20_26",
       "relation": "major",
       "to": "26"
     },
     {
       "from": "20",
+      "id": "20_30",
       "relation": "major",
       "to": "30"
     },
     {
       "from": "20",
+      "id": "20_33",
       "relation": "major",
       "to": "33"
     },
     {
       "from": "20",
+      "id": "20_34",
       "relation": "major",
       "to": "34"
     },
     {
       "from": "21",
+      "id": "21_20",
       "relation": "major",
       "to": "20"
     },
     {
       "from": "21",
+      "id": "21_25",
       "relation": "major",
       "to": "25"
     },
     {
       "from": "21",
+      "id": "21_32",
       "relation": "major",
       "to": "32"
     },
     {
       "from": "21",
+      "id": "21_36",
       "relation": "major",
       "to": "36"
     },
     {
       "from": "21",
+      "id": "21_38",
       "relation": "major",
       "to": "38"
     },
     {
       "from": "21",
+      "id": "21_41",
       "relation": "major",
       "to": "41"
     },
     {
       "from": "22",
+      "id": "22_33",
       "relation": "major",
       "to": "33"
     },
     {
       "from": "23",
+      "id": "23_29",
       "relation": "major",
       "to": "29"
     },
     {
       "from": "24",
+      "id": "24_23",
       "relation": "major",
       "to": "23"
     },
     {
       "from": "25",
+      "id": "25_28",
       "relation": "major",
       "to": "28"
     },
     {
       "from": "25",
+      "id": "25_32",
       "relation": "major",
       "to": "32"
     },
     {
       "from": "26",
+      "id": "26_31",
       "relation": "major",
       "to": "31"
     },
     {
       "from": "26",
+      "id": "26_32",
       "relation": "major",
       "to": "32"
     },
     {
       "from": "26",
+      "id": "26_38",
       "relation": "major",
       "to": "38"
     },
     {
       "from": "27",
+      "id": "27_37",
       "relation": "major",
       "to": "37"
     },
     {
       "from": "28",
+      "id": "28_38",
       "relation": "major",
       "to": "38"
     },
     {
       "from": "29",
+      "id": "29_27",
       "relation": "major",
       "to": "27"
     },
     {
       "from": "30",
+      "id": "30_26",
       "relation": "major",
       "to": "26"
     },
     {
       "from": "30",
+      "id": "30_31",
       "relation": "major",
       "to": "31"
     },
     {
       "from": "30",
+      "id": "30_32",
       "relation": "major",
       "to": "32"
     },
     {
       "from": "30",
+      "id": "30_35",
       "relation": "major",
       "to": "35"
     },
     {
       "from": "31",
+      "id": "31_32",
       "relation": "major",
       "to": "32"
     },
     {
       "from": "31",
+      "id": "31_40",
       "relation": "major",
       "to": "40"
     },
     {
       "from": "32",
+      "id": "32_37",
       "relation": "major",
       "to": "37"
     },
     {
       "from": "32",
+      "id": "32_39",
       "relation": "major",
       "to": "39"
     },
     {
       "from": "33",
+      "id": "33_32",
       "relation": "major",
       "to": "32"
     },
     {
       "from": "33",
+      "id": "33_39",
       "relation": "major",
       "to": "39"
     },
     {
       "from": "34",
+      "id": "34_32",
       "relation": "major",
       "to": "32"
     },
     {
       "from": "34",
+      "id": "34_33",
       "relation": "major",
       "to": "33"
     },
     {
       "from": "34",
+      "id": "34_38",
       "relation": "major",
       "to": "38"
     },
     {
       "from": "36",
+      "id": "36_35",
       "relation": "major",
       "to": "35"
     },
     {
       "from": "37",
+      "id": "37_38",
       "relation": "major",
       "to": "38"
     },
     {
       "from": "37",
+      "id": "37_39",
       "relation": "major",
       "to": "39"
     },
     {
       "from": "37",
+      "id": "37_40",
       "relation": "major",
       "to": "40"
     },
     {
       "from": "39",
+      "id": "39_38",
       "relation": "major",
       "to": "38"
     },
     {
       "from": "39",
+      "id": "39_40",
       "relation": "major",
       "to": "40"
     },
     {
       "from": "40",
+      "id": "40_38",
       "relation": "major",
       "to": "38"
     },
     {
       "from": "40",
+      "id": "40_39",
       "relation": "major",
       "to": "39"
     },
     {
       "from": "41",
+      "id": "41_9",
       "relation": "major",
       "to": "9"
     },
     {
       "from": "42",
+      "id": "42_9",
       "relation": "major",
       "to": "9"
     },
     {
       "from": "1",
+      "id": "1_27",
       "relation": "minor",
       "to": "27"
     },
     {
       "from": "2",
+      "id": "2_6",
       "relation": "minor",
       "to": "6"
     },
     {
       "from": "2",
+      "id": "2_9",
       "relation": "minor",
       "to": "9"
     },
     {
       "from": "3",
+      "id": "3_6",
       "relation": "minor",
       "to": "6"
     },
     {
       "from": "3",
+      "id": "3_10",
       "relation": "minor",
       "to": "10"
     },
     {
       "from": "3",
+      "id": "3_26",
       "relation": "minor",
       "to": "26"
     },
     {
       "from": "4",
+      "id": "4_6",
       "relation": "minor",
       "to": "6"
     },
     {
       "from": "5",
+      "id": "5_1",
       "relation": "minor",
       "to": "1"
     },
     {
       "from": "5",
+      "id": "5_2",
       "relation": "minor",
       "to": "2"
     },
     {
       "from": "5",
+      "id": "5_3",
       "relation": "minor",
       "to": "3"
     },
     {
       "from": "5",
+      "id": "5_4",
       "relation": "minor",
       "to": "4"
     },
     {
       "from": "5",
+      "id": "5_40",
       "relation": "minor",
       "to": "40"
     },
     {
       "from": "6",
+      "id": "6_12",
       "relation": "minor",
       "to": "12"
     },
     {
       "from": "7",
+      "id": "7_11",
       "relation": "minor",
       "to": "11"
     },
     {
       "from": "7",
+      "id": "7_24",
       "relation": "minor",
       "to": "24"
     },
     {
       "from": "8",
+      "id": "8_5",
       "relation": "minor",
       "to": "5"
     },
     {
       "from": "8",
+      "id": "8_7",
       "relation": "minor",
       "to": "7"
     },
     {
       "from": "8",
+      "id": "8_10",
       "relation": "minor",
       "to": "10"
     },
     {
       "from": "8",
+      "id": "8_12",
       "relation": "minor",
       "to": "12"
     },
     {
       "from": "8",
+      "id": "8_25",
       "relation": "minor",
       "to": "25"
     },
     {
       "from": "11",
+      "id": "11_12",
       "relation": "minor",
       "to": "12"
     },
     {
       "from": "11",
+      "id": "11_24",
       "relation": "minor",
       "to": "24"
     },
     {
       "from": "12",
+      "id": "12_32",
       "relation": "minor",
       "to": "32"
     },
     {
       "from": "14",
+      "id": "14_41",
       "relation": "minor",
       "to": "41"
     },
     {
       "from": "14",
+      "id": "14_42",
       "relation": "minor",
       "to": "42"
     },
     {
       "from": "18",
+      "id": "18_15",
       "relation": "minor",
       "to": "15"
     },
     {
       "from": "18",
+      "id": "18_25",
       "relation": "minor",
       "to": "25"
     },
     {
       "from": "20",
+      "id": "20_19",
       "relation": "minor",
       "to": "19"
     },
     {
       "from": "25",
+      "id": "25_8",
       "relation": "minor",
       "to": "8"
     },
     {
       "from": "26",
+      "id": "26_28",
       "relation": "minor",
       "to": "28"
     },
     {
       "from": "26",
+      "id": "26_33",
       "relation": "minor",
       "to": "33"
     },
     {
       "from": "32",
+      "id": "32_8",
       "relation": "minor",
       "to": "8"
     },
     {
       "from": "35",
+      "id": "35_6",
       "relation": "minor",
       "to": "6"
     },
     {
       "from": "35",
+      "id": "35_10",
       "relation": "minor",
       "to": "10"
     },
     {
       "from": "35",
+      "id": "35_25",
       "relation": "minor",
       "to": "25"
     },
     {
       "from": "35",
+      "id": "35_32",
       "relation": "minor",
       "to": "32"
     },
     {
       "from": "35",
+      "id": "35_38",
       "relation": "minor",
       "to": "38"
     },
     {
       "from": "36",
+      "id": "36_30",
       "relation": "minor",
       "to": "30"
     },
     {
       "from": "40",
+      "id": "40_1",
       "relation": "minor",
       "to": "1"
     },
     {
       "from": "12",
+      "id": "12_14",
       "relation": "false",
       "to": "14"
     },
     {
       "from": "17",
+      "id": "17_24",
       "relation": "false",
       "to": "24"
     },
     {
       "from": "18",
+      "id": "18_13",
       "relation": "false",
       "to": "13"
     },
     {
       "from": "18",
+      "id": "18_20",
       "relation": "false",
       "to": "20"
     },
     {
       "from": "18",
-      "relation": "false",
-      "to": "20"
-    },
-    {
-      "from": "18",
+      "id": "18_22",
       "relation": "false",
       "to": "22"
     },
     {
       "from": "20",
+      "id": "20_22",
       "relation": "false",
       "to": "22"
     },
     {
-      "from": "21",
-      "relation": "false",
-      "to": "16"
-    },
-    {
       "from": "13",
+      "id": "13_21",
       "relation": "simplified",
       "to": "21"
     },
     {
       "from": "21",
+      "id": "21_16",
       "relation": "simplified",
       "to": "16"
     },
     {
       "from": "21",
+      "id": "21_17",
       "relation": "simplified",
       "to": "17"
     },
     {
       "from": "21",
+      "id": "21_18",
       "relation": "simplified",
       "to": "18"
     },
     {
       "from": "21",
+      "id": "21_19",
       "relation": "simplified",
       "to": "19"
     }
@@ -893,9 +1014,7 @@
           "simplified": []
         },
         "origins": {
-          "false": [
-            "21"
-          ],
+          "false": [],
           "major": [
             "14"
           ],
@@ -947,7 +1066,6 @@
         "effects": {
           "false": [
             "13",
-            "20",
             "20",
             "22"
           ],
@@ -1052,7 +1170,6 @@
         },
         "origins": {
           "false": [
-            "18",
             "18"
           ],
           "major": [
@@ -1071,9 +1188,7 @@
       "id": "21",
       "relations": {
         "effects": {
-          "false": [
-            "16"
-          ],
+          "false": [],
           "major": [
             "20",
             "25",
